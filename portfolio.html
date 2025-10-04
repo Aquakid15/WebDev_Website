@@ -23,20 +23,103 @@
     <main>
         <section class="portfolio-section">
             <h1>My Portfolio</h1>
-            <p>Check out some of the web pages I've created!</p>
+            <p class="portfolio-intro">Explore my coding journey through select highlights. Each project showcases my growth as a developer and the skills I've mastered along the way.</p>
 
             <div class="portfolio-grid">
                 <article class="portfolio-item">
                     <h2>Biology Concept Map</h2>
-                    <p>An interactive, visually stunning concept map for studying biology at the molecular and cellular level. I built this to better help me understand concepts for my biology class. Features glassmorphism UI, animated diagrams, and covers 35+ key biology terms.</p>
-                    <a href="https://aquakid15.github.io/biology-concept-map/" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Live Site</a>
-                    <a href="https://github.com/Aquakid15/biology-concept-map" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Code</a>
+                    
+                    <div class="project-meta">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    
+                    <h3>Overview</h3>
+                    <p>An interactive, visually stunning concept map designed to help students master biology at the molecular and cellular level. I built this project to solve a real problem I faced: keeping track of 35+ interconnected biology terms while studying for exams.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Glassmorphism UI:</strong> Modern, frosted-glass design aesthetic that makes content pop</li>
+                        <li><strong>Interactive Diagrams:</strong> Click-to-reveal animations that make learning engaging</li>
+                        <li><strong>Responsive Layout:</strong> Works seamlessly on desktop and mobile devices</li>
+                        <li><strong>Search Functionality:</strong> Quickly find specific terms and concepts</li>
+                    </ul>
+                    
+                    <h3>Technical Challenges</h3>
+                    <p>The biggest challenge was organizing complex biological relationships in a way that's both visually appealing and educationally effective. I solved this by implementing a card-based layout with CSS Grid and using JavaScript to handle smooth transitions between different concept categories.</p>
+                    
+                    <div class="code-snippet">
+                        <h4>Sample Code - Interactive Card System:</h4>
+                        <pre><code>// Toggle card expansion on click
+document.querySelectorAll('.bio-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+        updateRelatedConcepts(card.dataset.term);
+    });
+});</code></pre>
+                    </div>
+                    
+                    <h3>What I Learned</h3>
+                    <p>This project taught me the importance of user-centered design. By building something I personally needed, I learned how to balance aesthetics with functionality. I also gained valuable experience with CSS animations and JavaScript event handling, skills I continue to use in every project.</p>
+                    
+                    <div class="project-links">
+                        <a href="https://aquakid15.github.io/biology-concept-map/" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Live Site</a>
+                        <a href="https://github.com/Aquakid15/biology-concept-map" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Code</a>
+                    </div>
                 </article>
 
                 <article class="portfolio-item">
                     <h2>Lyra Expense Tracker</h2>
-                    <p>An iOS expense tracking app built using Swift and SwiftUI. Lyra helps users manage their finances and track spending with a clean, native iOS interface.</p>
-                    <a href="https://github.com/Aquakid15/Lyra-expense-tracker" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Code</a>
+                    
+                    <div class="project-meta">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">SwiftUI</span>
+                        <span class="tech-tag">iOS</span>
+                    </div>
+                    
+                    <h3>Overview</h3>
+                    <p>Lyra is a native iOS expense tracking application built with Swift and SwiftUI. The app helps users manage their personal finances by tracking spending habits, categorizing expenses, and visualizing financial data through intuitive charts and summaries.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Expense Logging:</strong> Quick and easy entry system for daily transactions</li>
+                        <li><strong>Category System:</strong> Organize expenses by custom categories (food, entertainment, etc.)</li>
+                        <li><strong>Data Visualization:</strong> Charts and graphs showing spending patterns over time</li>
+                        <li><strong>Native iOS Design:</strong> Follows Apple's Human Interface Guidelines for a polished feel</li>
+                    </ul>
+                    
+                    <h3>Design Decisions</h3>
+                    <p>I chose SwiftUI over UIKit because it allowed me to build a modern, declarative interface more efficiently. The app uses Apple's SF Symbols for icons, ensuring consistency with the iOS ecosystem. I implemented Core Data for persistent storage, allowing users to track their expenses over months and years.</p>
+                    
+                    <div class="code-snippet">
+                        <h4>Sample Code - SwiftUI Expense View:</h4>
+                        <pre><code>struct ExpenseRow: View {
+    let expense: Expense
+    
+    var body: some View {
+        HStack {
+            CategoryIcon(expense.category)
+            VStack(alignment: .leading) {
+                Text(expense.name)
+                Text(expense.date, style: .date)
+            }
+            Spacer()
+            Text("$\(expense.amount, specifier: "%.2f")")
+        }
+    }
+}</code></pre>
+                    </div>
+                    
+                    <h3>Challenges Overcome</h3>
+                    <p>Learning SwiftUI's state management system was initially challenging. Understanding the difference between @State, @Binding, and @ObservedObject took time, but mastering these concepts made me a much stronger iOS developer. I also had to figure out how to efficiently query and filter Core Data records for the chart views.</p>
+                    
+                    <h3>Personal Growth</h3>
+                    <p>This project marked my transition from web development to native mobile app development. It taught me the importance of platform-specific design patterns and gave me confidence to explore new technologies. Building Lyra showed me that the problem-solving skills I learned in web development transfer beautifully to mobile development.</p>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/Aquakid15/Lyra-expense-tracker" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Code on GitHub</a>
+                    </div>
                 </article>
             </div>
         </section>

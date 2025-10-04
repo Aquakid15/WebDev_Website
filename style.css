@@ -14,7 +14,7 @@ body {
 header {
     background-color: #000;
     padding: 1rem;
-    border-bottom: 2px solid #ff6b6b;
+    border-bottom: 2px solid #631818;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #ff6b6b;
+    border: 2px solid #5c1616;
 }
 
 nav ul {
@@ -37,11 +37,15 @@ nav a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #631818;
 }
 
 nav a[aria-current="page"] {
-    background-color: #ff6b6b;
-    border-radius: 4px;
+    background-color: #771b1b;
 }
 
 main {
@@ -50,13 +54,36 @@ main {
     padding: 1rem;
 }
 
-h1, h2 {
+h1 {
+    color: #ff6b6b;
+    margin: 1.5rem 0;
+    font-size: 2.5em;
+}
+
+h2 {
     color: #ff6b6b;
     margin: 1rem 0;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #ff8888;
+    margin: 1rem 0;
+    font-size: 1.3em;
+}
+
+h4 {
+    color: #ff8888;
+    margin: 0.8rem 0;
 }
 
 a {
     color: #ff6b6b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8888;
 }
 
 .profile-image {
@@ -66,9 +93,193 @@ a {
     border: 3px solid #ff6b6b;
 }
 
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 1.2em;
+}
+
+.intro {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #1a0505;
+    border-radius: 10px;
+}
+
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: #1a0505;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #631818;
+}
+
+.card:hover {
+    border-color: #ff6b6b;
+}
+
+.card h3 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #ff8888;
+    font-weight: bold;
+}
+
+.bio, .interests, .hobbies {
+    background-color: #1a0505;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b6b;
+}
+
+.hobby-section {
+    background-color: #0a0a0a;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid #631818;
+}
+
+.interests ul, .hobbies ul {
+    margin-left: 2rem;
+}
+
+.interests li, .hobbies li {
+    margin: 0.5rem 0;
+}
+
+.portfolio-intro {
+    text-align: center;
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background-color: #1a0505;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #631818;
+}
+
+.portfolio-item:hover {
+    border-color: #ff6b6b;
+}
+
+.project-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: #631818;
+    color: #ff8888;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.portfolio-item ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.portfolio-item li {
+    margin: 0.5rem 0;
+}
+
+.code-snippet {
+    background-color: #0a0a0a;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    border: 1px solid #631818;
+}
+
+.code-snippet code {
+    color: #ff8888;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-link {
+    background-color: #771b1b;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #631818;
+}
+
+.portfolio-link:hover {
+    background-color: #ff6b6b;
+    color: #000;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    background-color: #1a0505;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #631818;
+    text-align: center;
+}
+
+.contact-card:hover {
+    border-color: #ff6b6b;
+}
+
+.contact-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: #ff8888;
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     border-top: 2px solid #ff6b6b;
     margin-top: 2rem;
+    color: #aaa;
 }
